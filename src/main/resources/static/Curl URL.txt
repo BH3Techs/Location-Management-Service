@@ -7,3 +7,12 @@ curl --location --request POST 'http://localhost:8082/shop/add' \
     "shopType":"Gaming Shop",
     "shopAreaID": "1"
 }'
+
+Finding aShop By ID
+curl --location --request GET 'http://localhost:8989/shop-api/shop/1' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "shopID":"1",
+    "shopName":"Shop Chaiyo",
+    "shopType":"Gaming Shop"
+}'
