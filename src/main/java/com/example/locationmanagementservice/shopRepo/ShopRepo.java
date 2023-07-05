@@ -7,13 +7,15 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * 5/7/2023
  *
  * @author bhugs -"Howard Mabhugu"
  * LocationManagementService
  **/
-
+@Repository
 public interface ShopRepo extends CrudRepository<Shop, Long> {
-    Shop findShopByShopID(Long shopId);
+    Optional<Shop> findShopByShopID(Long shopId);
 }

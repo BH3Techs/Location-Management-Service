@@ -2,7 +2,6 @@ package com.example.locationmanagementservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -22,10 +21,10 @@ public class ApplicationConfig {
                 .paths(PathSelectors.any())
                 .build();
     }
-    
+
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("BANKING APPLICATION REST API")
-        		.description("API for Banking Application.")
+        return new ApiInfoBuilder().title("LOCATION MANAGEMENT APPLICATION REST API")
+        		.description("API for managing Locations.")
                 .version("1.0.0").build();
     }
 }

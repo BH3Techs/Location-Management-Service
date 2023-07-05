@@ -3,7 +3,9 @@ package com.example.locationmanagementservice.controller;
 import com.example.locationmanagementservice.messages.BaseResponse;
 import com.example.locationmanagementservice.model.Shop;
 import com.example.locationmanagementservice.service.ShopService;
+import com.example.locationmanagementservice.service.impl.ShopServiceImpl;
 import com.example.locationmanagementservice.shopRepo.ShopRepo;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +24,10 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/shop")
+@Api(tags = { "Location Management REST endpoints" })
 public class ShopController {
     @Autowired
-    private ShopService shopService;
+    private ShopServiceImpl shopService;
     private ShopRepo shopRepo;
 
     //This method will be used to create or update any record in the shop

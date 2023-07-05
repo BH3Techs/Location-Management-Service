@@ -1,0 +1,9 @@
+Adding aShop
+curl --location --request POST 'http://localhost:8082/shop/add' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "shopID":"1",
+    "shopName":"Shop Chaiyo",
+    "shopType":"Gaming Shop",
+    "shopAreaID": "1"
+}'
