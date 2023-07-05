@@ -14,7 +14,7 @@ RESTful API to simulate simple banking operations.
 1. Checkout the project from GitHub
 
 ```
-git clone https://github.com/BH3Techs/nmbapp
+git clone https://github.com/BH3Techs/Location-Management-Service
 
 ```
 2. Enable Lombok support on your IDE
@@ -38,7 +38,7 @@ https://projectlombok.org/setup/eclipse
 
 ### Prerequisites
 
-* Java 11
+* Java 1.8
 * Spring Tool Suite 4 or similar IDE
 * [Maven](https://maven.apache.org/) - Dependency Management
 
@@ -50,7 +50,7 @@ spring-boot-starter-data-jpa
 spring-boot-starter-security
 spring-boot-starter-web
 spring-boot-devtools
-h2 - Inmemory database
+mysql
 lombok - to reduce boilerplate code
 springfox-swagger2
 springfox-swagger-ui
@@ -59,32 +59,10 @@ spring-security-test
 
 ```
 
-## Swagger
-
-Please find the Rest API documentation in the below url
-
-```
-http://localhost:8989/bank-api/swagger-ui.html
-
-```
-
-## H2 In-Memory Database
-
-Make sure to use jdbc:h2:mem:testdb as your jdbc url. If you intend to you use custom database name, please
-define datasource properties in application.yml
-
-```
-http://localhost:8989/bank-api/h2-console/
-
-```
-
-## Testing the NMB APP Rest Api
-
-1. Please use the Swagger url to perform CRUD operations. 
-
 2. Browse to <project-root>/src/test/resources to find sample requests to add customer and accounts.
 
-
+## Video URL 
+https://drive.google.com/file/d/1YM69lfo4QbY0aptz_CCORiUWQf3zVvhz/view?usp=sharing
 ## Authors
 
 * **Howard Mabhugu**
