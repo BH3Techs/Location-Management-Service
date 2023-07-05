@@ -10,5 +10,5 @@ create table if not exists  shops (
     shop_id varchar(255) not null,
     shop_name varchar(255) not null,
     shop_type varchar(2048) default null,
-    primary key (area_id)
+    primary key (shop_id)
     )  ;

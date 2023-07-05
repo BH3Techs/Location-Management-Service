@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
 import javax.persistence.*;
 import java.util.UUID;
 
@@ -15,16 +14,21 @@ import java.util.UUID;
  * @author bhugs -"Howard Mabhugu"
  * nmbapp
  **/
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
+@Builder
 public class Area {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private UUID id;
 
-    private String AreaID;
-    private String AreaName;
-    private String AreaType;
-    private String AreaCode;
-    private String ParentalAreaID;
+    private Long areaID;
+    private String areaName;
+    private String areaType;
+    private String areaCode;
+    private String parentalAreaID;
 
 }

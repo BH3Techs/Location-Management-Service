@@ -1,6 +1,9 @@
 package com.example.locationmanagementservice.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.UUID;
@@ -11,18 +14,22 @@ import java.util.UUID;
  * @author bhugs -"Howard Mabhugu"
  * LocationManagementService
  **/
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
+@Builder
 public class Shop {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private UUID id;
 
-    private String ShopID;
-    private String ShopName;
-    private String ShopType;
+    private Long shopID;
+    private String shopName;
+    private String shopType;
 
-    @ManyToOne(cascade= CascadeType.ALL)
+    @ManyToOne(cascade=CascadeType.ALL)
     private Area areaID;
 
 }

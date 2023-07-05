@@ -2,6 +2,10 @@ package com.example.locationmanagementservice.service;
 
 import com.example.locationmanagementservice.messages.BaseResponse;
 import com.example.locationmanagementservice.model.Shop;
+import com.example.locationmanagementservice.model.ShopDetails;
+import org.springframework.http.ResponseEntity;
+
+import java.util.List;
 
 /**
  * 5/7/2023
@@ -10,5 +14,9 @@ import com.example.locationmanagementservice.model.Shop;
  * LocationManagementService
  **/
 public interface ShopService {
-    BaseResponse createOrUpdateShop(Shop shop);
+    public List<ShopDetails> findAll();
+
+    public ResponseEntity<Object> addShop(ShopDetails customerDetails);
+
+    public ShopDetails findByShopNumber(Long customerNumber);
 }
