@@ -1,4 +1,4 @@
-# NMBAPP using Java11, Spring Boot, Spring Security and H2 DB
+# NMBAPP using Java1.8, Spring Boot, Spring Security and MySql
 
 RESTful API to simulate simple banking operations. 
 
